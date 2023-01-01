@@ -1,11 +1,11 @@
-# Install React Eslint Tailwind Template
+# Install React Redux- Todo application
 
-Setting up This Template in a Create React App project has been done is this repository.
+This project is about tracking daily todo task. In this project I use tailwindcss,react redux
 
 Step 1: Clone this repository
 
 ```sh
-git clone https://github.com/rakibtweets/react-eslint-tailwind.git
+git clone https://github.com/rakibtweets/todo-list-react-redux.git
 
 ```
 
