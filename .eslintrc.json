@@ -13,6 +13,10 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "linebreak-style": "off",
-    "jsx-a11y/control-has-associated-label": 0
+    "jsx-a11y/control-has-associated-label": 0,
+    "import/prefer-default-export": 0,
+    "arrow-body-style": ["off", "always"],
+    "indent": ["warn", 2],
+    "comma-dangle": "off"
   }
 }
