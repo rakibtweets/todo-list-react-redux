@@ -17,6 +17,8 @@
     "import/prefer-default-export": 0,
     "arrow-body-style": ["off", "always"],
     "indent": ["warn", 2],
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "default-param-last": 0,
+    "array-callback-return": 0
   }
 }

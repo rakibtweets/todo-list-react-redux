@@ -1,5 +1,5 @@
 import {
-  ADDED, ALL_COMPLETED, COLORSELECTED, DELETED, TOGGLED
+  ADDED, ALL_COMPLETED, CLEAR_COMPLETED, COLORSELECTED, DELETED, TOGGLED
 } from './actionTypes';
 
 export const added = (todoText) => {
@@ -37,5 +37,11 @@ export const deleted = (todoId) => {
 export const allCompleted = () => {
   return {
     type: ALL_COMPLETED,
+  };
+};
+
+export const clearCompleted = () => {
+  return {
+    type: CLEAR_COMPLETED,
   };
 };
