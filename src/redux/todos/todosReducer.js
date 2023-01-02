@@ -1,5 +1,5 @@
 import {
-    ADDED, ALL_COMPLETED, CLEAR_COMPLETED, COLORSELECTED, DELETED, TOGGLED
+  ADDED, ALL_COMPLETED, CLEAR_COMPLETED, COLORSELECTED, DELETED, TOGGLED
 } from './actionTypes';
 import initialState from './initialState';
 
