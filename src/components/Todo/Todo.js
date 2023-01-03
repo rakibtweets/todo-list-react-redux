@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import cancelImage from '../../assets/images/cancel.png';
-import { colorSelected, toggled } from '../../redux/todos/actions';
+import { colorSelected, deleteTodo, toggled } from '../../redux/todos/actions';
 
 function Todo({ todo }) {
   const dispatch = useDispatch();
@@ -15,6 +15,10 @@ function Todo({ todo }) {
 
   const handleColorChange = (todoId, selectedColor) => {
     dispatch(colorSelected(todoId, selectedColor));
+  };
+
+  const handleDeleteTodo = (todoId) => {
+    dispatch(deleteTodo(todoId));
   };
 
   return (
@@ -64,11 +68,15 @@ function Todo({ todo }) {
 
       />
 
-      <img
-        src={cancelImage}
-        className="flex-shrink-0 w-4 h-4 ml-2 cursor-pointer"
-        alt="Cancel"
-      />
+      <button type="button" onClick={() => handleDeleteTodo(id)}>
+        <img
+          src={cancelImage}
+          className="flex-shrink-0 w-4 h-4 ml-2 cursor-pointer"
+          alt="Cancel"
+        />
+
+      </button>
+
     </div>
   );
 }

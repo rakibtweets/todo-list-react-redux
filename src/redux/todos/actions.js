@@ -26,7 +26,7 @@ export const colorSelected = (todoId, color) => {
   };
 };
 
-export const deleted = (todoId) => {
+export const deleteTodo = (todoId) => {
   return {
     type: DELETED,
     payload: todoId,
