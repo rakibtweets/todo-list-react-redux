@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import cancelImage from '../../assets/images/cancel.png';
-import { toggled } from '../../redux/todos/actions';
+import { colorSelected, toggled } from '../../redux/todos/actions';
 
 function Todo({ todo }) {
   const dispatch = useDispatch();
@@ -9,8 +9,12 @@ function Todo({ todo }) {
     id, text, completed, color
   } = todo;
 
-  const hanldeStateChange = (todoId) => {
+  const handleStateChange = (todoId) => {
     dispatch(toggled(todoId));
+  };
+
+  const handleColorChange = (todoId, selectedColor) => {
+    dispatch(colorSelected(todoId, selectedColor));
   };
 
   return (
@@ -23,7 +27,7 @@ function Todo({ todo }) {
         <input
           type="checkbox"
           checked={completed}
-          onChange={() => hanldeStateChange(id)}
+          onChange={() => handleStateChange(id)}
           className="opacity-0 absolute rounded-full"
         />
         {completed && (
@@ -40,16 +44,24 @@ function Todo({ todo }) {
         {text}
       </div>
 
-      <div
+      <button
+        type="button"
         className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-green-500 hover:bg-green-500 ${color === 'green' && ' bg-green-500'}`}
+        onClick={() => handleColorChange(id, 'green')}
       />
 
-      <div
+      <button
+        type="button"
         className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-yellow-500 hover:bg-yellow-500 ${color === 'yellow' && ' bg-yellow-500'}`}
+        onClick={() => handleColorChange(id, 'yellow')}
+
       />
 
-      <div
+      <button
+        type="button"
         className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-red-500 hover:bg-red-500 ${color === 'red' && ' bg-red-500'}`}
+        onClick={() => handleColorChange(id, 'red')}
+
       />
 
       <img
