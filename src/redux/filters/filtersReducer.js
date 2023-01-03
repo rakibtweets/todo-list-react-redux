@@ -8,6 +8,7 @@ const filterReducer = (state = initialState, { type, payload }) => {
       ...state,
       status: payload
     };
+
   case COLOR_CHANGED: {
     const { color, changeType } = payload;
     switch (changeType) {
