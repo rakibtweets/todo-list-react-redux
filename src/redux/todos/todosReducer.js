@@ -15,7 +15,8 @@ const todosReducer = (state = initialState, { type, payload }) => {
     return [
       ...state,
       {
-        id: nextTodoId(state)
+        id: nextTodoId(state),
+        text: payload
       }
     ];
 
