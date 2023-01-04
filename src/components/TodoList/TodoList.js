@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Todo from '../Todo/Todo';
 
-const filterStatus = (todo, status) => {
+const filterByStatus = (todo, status) => {
   switch (status) {
   case 'Complete':
     return todo.completed;
@@ -13,7 +13,7 @@ const filterStatus = (todo, status) => {
   }
 };
 
-const filterColor = (todo, colors) => {
+const filterByColor = (todo, colors) => {
   if (colors.length > 0) {
     return colors.includes(todo?.color);
   }
@@ -28,8 +28,8 @@ function TodoList() {
       {/* <!-- todo --> */}
       {
         todos
-          .filter((todo) => filterStatus(todo, status))
-          .filter((todo) => filterColor(todo, colors))
+          .filter((todo) => filterByStatus(todo, status))
+          .filter((todo) => filterByColor(todo, colors))
           .map((todo) => <Todo key={todo.id} todo={todo} />)
       }
 
