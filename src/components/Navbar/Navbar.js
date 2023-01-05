@@ -3,7 +3,7 @@ import React from 'react';
 function Navbar() {
   return (
     <div
-      className="fixed top-0 left-0 text-center w-full header bg-violet-600 py-4 text-white font-bold text-lg shadow-lg"
+      className="fixed top-0 left-0 text-center w-full header bg-green-600 py-6 text-white font-bold text-2xl shadow-lg"
     >
       Simple Todo Application with Redux
     </div>
