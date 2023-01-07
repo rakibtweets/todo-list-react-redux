@@ -1,5 +1,5 @@
 import {
-  ADDED, ALL_COMPLETED, CLEAR_COMPLETED, COLORSELECTED, DELETED, TOGGLED
+  ADDED, ALL_COMPLETED, CLEAR_COMPLETED, COLORSELECTED, DELETED, LOADED, TOGGLED
 } from './actionTypes';
 import initialState from './initialState';
 
@@ -11,6 +11,9 @@ const nextTodoId = (todos) => {
 // eslint-disable-next-line no-unused-vars
 const todosReducer = (state = initialState, { type, payload }) => {
   switch (type) {
+  case LOADED:
+    return payload;
+
   case ADDED:
     return [
       ...state,
