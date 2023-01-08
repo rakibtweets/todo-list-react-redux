@@ -17,6 +17,16 @@
       "text": "Learn Mongoose",
       "completed": true,
       "color": "green"
+    },
+    {
+      "text": "Redux Thunk ",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "text": "thunk todos",
+      "completed": false,
+      "id": 5
     }
   ]
 }
