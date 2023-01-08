@@ -1,12 +1,11 @@
 import { toggled } from '../actions';
 
-const addTodo = (todoText) => {
+const updateTodoStatus = (todoId, currentStatus) => {
   return async (disptach) => {
-    const response = await fetch('http://localhost:9000/todos', {
-      method: 'POST',
+    const response = await fetch(`http://localhost:9000/todos/${todoId}`, {
+      method: 'PATCH',
       body: JSON.stringify({
-        text: todoText,
-        completed: false
+        completed: !currentStatus
       }),
       headers: {
         'Content-type': 'application/json; charset=utf-8'
@@ -16,5 +15,4 @@ const addTodo = (todoText) => {
     disptach(toggled(todo.id));
   };
 };
-
-export default addTodo;
+export default updateTodoStatus;
