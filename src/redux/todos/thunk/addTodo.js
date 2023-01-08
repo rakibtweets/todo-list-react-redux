@@ -1,4 +1,4 @@
-import { toggled } from '../actions';
+import { addedTodo } from '../actions';
 
 const addTodo = (todoText) => {
   return async (disptach) => {
@@ -13,7 +13,7 @@ const addTodo = (todoText) => {
       }
     });
     const todo = await response.json();
-    disptach(toggled(todo.id));
+    disptach(addedTodo(todo.text));
   };
 };
 
