@@ -26,7 +26,8 @@
     {
       "text": "thunk todos",
       "completed": false,
-      "id": 5
+      "id": 5,
+      "color": "red"
     }
   ]
 }
